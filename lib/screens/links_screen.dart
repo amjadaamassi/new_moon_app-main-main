@@ -116,6 +116,20 @@ class _LinksScreenState extends State<LinksScreen> {
 
 
 
+              myLinksRowItem(
+                "رابط قناة خرائط رحال",
+                    () async {
+                  final url = "https://t.me/joinchat/AAAAAFDllAHqv-PJ0hLDow";
+                  if (await canLaunch(url)) {
+                    await launch(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
+              ),
+
+
+
 
             ],
           ),
